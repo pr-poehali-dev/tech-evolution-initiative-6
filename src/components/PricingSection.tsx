@@ -4,14 +4,13 @@ import { Button } from "@/components/ui/button"
 
 const pricingTiers = [
   {
-    name: "Самостоятельный",
-    price: "9 900",
-    description: "Все материалы и шаблоны в своём темпе",
+    name: "Базовый",
+    price: "12 900",
+    description: "Самостоятельное обучение в своём темпе",
     features: [
-      "8 модулей с видео и PDF",
-      "40+ готовых шаблонов и скриптов",
-      "Пошаговые алгоритмы для агрегаторов",
-      "Калькулятор стоимости сессии",
+      "Доступ ко всем видеоурокам",
+      "Учебные материалы и шаблоны",
+      "Практические задания",
       "Удостоверение о повышении квалификации",
       "Доступ к материалам 6 месяцев",
     ],
@@ -19,14 +18,14 @@ const pricingTiers = [
   },
   {
     name: "С поддержкой",
-    price: "16 900",
-    description: "Обучение + куратор + сообщество",
+    price: "19 900",
+    description: "Обучение с обратной связью от куратора",
     features: [
-      "Всё из тарифа «Самостоятельный»",
-      "Проверка анкеты и профиля куратором",
-      "Разбор вашего позиционирования",
-      "Закрытое сообщество участниц",
-      "Еженедельные групповые разборы",
+      "Всё из тарифа «Базовый»",
+      "Проверка домашних заданий",
+      "Обратная связь от куратора",
+      "Доступ к закрытому сообществу",
+      "Групповые разборы раз в неделю",
       "Доступ к материалам 12 месяцев",
     ],
     highlighted: true,
@@ -37,8 +36,8 @@ const pricingTiers = [
     description: "Индивидуальная работа с экспертом",
     features: [
       "Всё из тарифа «С поддержкой»",
-      "2 личные сессии с экспертом-куратором",
-      "Персональный план на 90 дней",
+      "3 личные сессии с экспертом",
+      "Персональный план продвижения",
       "Разбор вашего реального кейса",
       "Пожизненный доступ к материалам",
     ],
@@ -53,6 +52,7 @@ export function PricingSection() {
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       </div>
+
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
@@ -63,10 +63,10 @@ export function PricingSection() {
             Стоимость обучения
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-balance">
-            Выберите <span className="text-primary">подходящий формат</span>
+            Выберите <span className="text-primary">подходящий формат</span> обучения
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Для тех, кто только начинает, и для тех, кто хочет восстановить поток клиентов
+            Для новичков и опытных специалистов — найдите тариф, который подходит именно вам
           </p>
         </div>
 
@@ -89,21 +89,23 @@ export function PricingSection() {
                 <CardTitle className="text-2xl mb-1">{tier.name}</CardTitle>
                 <p className="text-sm text-muted-foreground">{tier.description}</p>
                 <div className="mt-4">
-                  {tier.price === "По запросу" ? (
-                    <span className="text-3xl font-bold">{tier.price}</span>
-                  ) : (
-                    <span className="text-4xl font-bold">
-                      {tier.price}
-                      <span className="text-lg font-normal text-muted-foreground"> ₽</span>
-                    </span>
-                  )}
+                  <span className="text-4xl font-bold">
+                    {tier.price === "По запросу" ? (
+                      <span className="text-3xl">{tier.price}</span>
+                    ) : (
+                      <>
+                        {tier.price}
+                        <span className="text-lg font-normal text-muted-foreground"> ₽</span>
+                      </>
+                    )}
+                  </span>
                 </div>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3 mb-8">
-                  {tier.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  {tier.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start gap-3 group/item">
+                      <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform" />
                       <span className="text-sm leading-relaxed">{feature}</span>
                     </li>
                   ))}
@@ -124,9 +126,8 @@ export function PricingSection() {
 
         <div className="mt-12 text-center">
           <p className="text-sm text-muted-foreground">
-            Все тарифы включают{" "}
-            <span className="text-primary font-semibold">удостоверение о повышении квалификации</span> и{" "}
-            <span className="text-primary font-semibold">пожизненный доступ к шаблонам</span>
+            Все тарифы включают <span className="text-primary font-semibold">удостоверение государственного образца</span> и{" "}
+            <span className="text-primary font-semibold">доступ к закрытому сообществу выпускников</span>
           </p>
         </div>
       </div>

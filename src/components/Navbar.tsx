@@ -31,10 +31,10 @@ export function Navbar() {
               О курсе
             </a>
             <a href="#services" className="text-sm font-medium hover:text-primary transition-colors">
-              Программа
+              Чему научитесь
             </a>
-            <a href="#diagnosis" className="text-sm font-medium hover:text-primary transition-colors">
-              Диагностика
+            <a href="#portfolio" className="text-sm font-medium hover:text-primary transition-colors">
+              Программа
             </a>
             <a href="#pricing" className="text-sm font-medium hover:text-primary transition-colors">
               Стоимость

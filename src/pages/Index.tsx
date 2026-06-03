@@ -2,8 +2,8 @@ import { Navbar } from "@/components/Navbar"
 import { HeroSection } from "@/components/HeroSection"
 import { ServicesSection } from "@/components/ServicesSection"
 import { AboutSection } from "@/components/AboutSection"
-import { DiagnosisSection } from "@/components/DiagnosisSection"
 import { TestimonialsSection } from "@/components/TestimonialsSection"
+import { PortfolioSection } from "@/components/PortfolioSection"
 import { PricingSection } from "@/components/PricingSection"
 import { ContactSection } from "@/components/ContactSection"
 import { Footer } from "@/components/Footer"
@@ -13,10 +13,10 @@ export default function Index() {
     <main className="min-h-screen">
       <Navbar />
       <HeroSection />
-      <AboutSection />
       <ServicesSection />
-      <DiagnosisSection />
+      <AboutSection />
       <TestimonialsSection />
+      <PortfolioSection />
       <PricingSection />
       <ContactSection />
       <Footer />
