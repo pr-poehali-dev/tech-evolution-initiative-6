@@ -4,28 +4,29 @@ import { Quote } from "lucide-react"
 
 const testimonials = [
   {
-    quote:
-      "После курса я наконец-то перестала бояться продвигать себя. Уже через месяц после обучения у меня появились первые клиенты из Instagram, которых я привлекла сама.",
-    name: "Анна К.",
-    role: "Психолог-консультант",
+    quote: "Я три года откладывала старт — «ещё не готова». После первого модуля поняла: это ловушка. Через две недели разместила анкету на B17. Уже есть первые отклики.",
+    name: "Марина, 41 год",
+    role: "Перешла из HR в психологию",
   },
   {
-    quote:
-      "Курс дал мне чёткую систему: что делать, в какой последовательности, как измерять результат. Раньше я тратила деньги на рекламу вслепую, теперь всё иначе.",
-    name: "Михаил Р.",
-    role: "Семейный психолог",
+    quote: "Вела практику как коуч без диплома. Боялась, что меня не возьмут в Alter. Курс дал пошаговый алгоритм подачи — прошла с первого раза. Теперь поток клиентов стабильный.",
+    name: "Ольга, 48 лет",
+    role: "Коуч, легализовала практику",
   },
   {
-    quote:
-      "Я практикующий психолог с 10-летним опытом, но с продвижением была полная каша. После обучения запустила сайт, настроила соцсети — запись заполнена на 3 недели вперёд.",
-    name: "Елена В.",
+    quote: "Главная ценность — шаблоны. Не нужно думать, что писать в профиле или как ответить клиенту впервые. Берёшь готовое, адаптируешь под себя — и делаешь.",
+    name: "Татьяна, 38 лет",
     role: "Клинический психолог",
   },
   {
-    quote:
-      "Очень практичный курс. Никакой воды — только конкретные инструменты, которые реально работают для психологов. Куратор всегда на связи и помогал разобраться со сложными моментами.",
-    name: "Ольга М.",
-    role: "Психолог, гештальт-терапевт",
+    quote: "Наконец-то курс на языке психолога, а не маркетолога. Никаких «воронок продаж» и «целевых аудиторий» — всё про помощь людям и этичную видимость.",
+    name: "Светлана, 52 года",
+    role: "Семейный психолог",
+  },
+  {
+    quote: "Instagram заблокирован, клиенты ушли. Курс показал три канала, о которых я вообще не думала. За месяц восстановила прежний поток через агрегаторы.",
+    name: "Наталья, 44 года",
+    role: "Психолог-консультант",
   },
 ]
 
@@ -42,44 +43,36 @@ export function TestimonialsSection() {
 
     const scroll = () => {
       scrollPosition += scrollSpeed
-
       if (scrollContainer.scrollWidth && scrollPosition >= scrollContainer.scrollWidth / 2) {
         scrollPosition = 0
       }
-
       scrollContainer.scrollLeft = scrollPosition
       animationFrameId = requestAnimationFrame(scroll)
     }
 
     animationFrameId = requestAnimationFrame(scroll)
-
-    return () => {
-      cancelAnimationFrame(animationFrameId)
-    }
+    return () => cancelAnimationFrame(animationFrameId)
   }, [])
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30 overflow-hidden">
       <div className="container mx-auto max-w-7xl">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-balance">
-          Что говорят выпускники
+          Истории завершивших курс
         </h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto text-pretty leading-relaxed">
-          Психологи, которые уже прошли курс и выстроили стабильный поток клиентов.
+        <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
+          Психологи, которые прошли курс до конца — и получили первых клиентов.
         </p>
-
         <div className="relative">
           <div ref={scrollRef} className="flex gap-6 overflow-x-hidden" style={{ scrollBehavior: "auto" }}>
-            {[...testimonials, ...testimonials].map((testimonial, index) => (
-              <Card key={index} className="flex-shrink-0 w-[90vw] sm:w-[450px] border-none shadow-lg">
+            {[...testimonials, ...testimonials].map((t, index) => (
+              <Card key={index} className="flex-shrink-0 w-[90vw] sm:w-[420px] border-none shadow-lg">
                 <CardContent className="p-8">
                   <Quote className="h-8 w-8 text-primary mb-4" />
-                  <p className="text-base sm:text-lg mb-6 leading-relaxed text-pretty min-h-[120px]">
-                    {testimonial.quote}
-                  </p>
+                  <p className="text-base sm:text-lg mb-6 leading-relaxed min-h-[100px]">{t.quote}</p>
                   <div>
-                    <p className="font-semibold text-lg">{testimonial.name}</p>
-                    <p className="text-muted-foreground text-sm">{testimonial.role}</p>
+                    <p className="font-semibold text-lg">{t.name}</p>
+                    <p className="text-muted-foreground text-sm">{t.role}</p>
                   </div>
                 </CardContent>
               </Card>

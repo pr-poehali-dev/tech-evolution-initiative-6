@@ -2,19 +2,19 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle2, Sparkles } from "lucide-react"
 
 const values = [
-  { title: "Практические инструменты", description: "Только рабочие методы, проверенные на реальных психологах" },
-  { title: "Дистанционный формат", description: "Учитесь в любое время и из любой точки мира" },
-  { title: "Поддержка куратора", description: "Обратная связь и ответы на вопросы на протяжении всего курса" },
-  { title: "Системный подход", description: "Чёткая последовательность шагов — от нуля до стабильного потока клиентов" },
-  { title: "Сообщество коллег", description: "Закрытая группа выпускников для обмена опытом и нетворкинга" },
-  { title: "Документ об образовании", description: "Удостоверение о повышении квалификации установленного образца" },
+  { title: "Готовые шаблоны и скрипты", description: "Анкеты для агрегаторов, скрипты первого контакта, шаблоны самопрезентации — берёте и используете сразу" },
+  { title: "Пошаговые инструкции", description: "Алгоритмы подачи на B17, Ясно, Alter — со скриншотами, понятно даже без технических навыков" },
+  { title: "Работа с барьерами", description: "Сначала снимаем синдром самозванца и страх проявленности — только потом инструменты продвижения" },
+  { title: "Кейсы от реальных клиентов", description: "Как продвижение помогло психологам помочь людям — этика и польза, а не агрессивные продажи" },
+  { title: "Реалистичный темп", description: "Короткие видео и PDF-материалы — обучение для занятых людей, без многочасовых вебинаров" },
+  { title: "Документ об образовании", description: "Удостоверение о повышении квалификации НАДПО — весомый аргумент для клиентов и агрегаторов" },
 ]
 
 const stats = [
-  { number: "244", label: "Часа обучения" },
-  { number: "2", label: "Месяца курса" },
-  { number: "4", label: "Модуля программы" },
-  { number: "100%", label: "Дистанционно" },
+  { number: "8", label: "Модулей курса" },
+  { number: "40+", label: "Готовых шаблонов" },
+  { number: "6", label: "Агрегаторов разобрано" },
+  { number: "90", label: "Дней стратегии" },
 ]
 
 export function AboutSection() {
@@ -27,19 +27,19 @@ export function AboutSection() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold">
             <Sparkles className="h-4 w-4" />
-            О курсе
+            Почему «Психолог на виду»
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Обучение, которое{" "}
+            Не ещё один курс{" "}
             <span className="text-primary relative">
-              работает
+              по маркетингу
               <svg className="absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 200 8" fill="none">
                 <path d="M0 4C50 2 150 6 200 4" stroke="currentColor" strokeWidth="2" className="text-primary" />
               </svg>
             </span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
-            НАДПО — Национальная академия дополнительного профессионального образования. Курс разработан специально для частных психологов, которые хотят выстроить стабильную практику и перестать зависеть от сарафанного радио.
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Большинство курсов дают знания о продвижении — мы даём готовые инструменты и помогаем сделать первый шаг. Это важнее, чем знать теорию нейромаркетинга.
           </p>
         </div>
 

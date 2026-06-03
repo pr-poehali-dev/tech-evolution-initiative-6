@@ -51,13 +51,13 @@ export function HeroSection() {
       <div className="container mx-auto text-center max-w-5xl relative z-10">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6 animate-fade-in-up">
           <Sparkles className="w-4 h-4 text-primary" />
-          <span className="text-sm font-medium text-primary">НАДПО — Профессиональное дополнительное образование</span>
+          <span className="text-sm font-medium text-primary">Новый курс НАДПО — 2026</span>
         </div>
 
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 animate-fade-in-up text-balance">
-          Продвижение{" "}
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-6 animate-fade-in-up text-balance">
+          Психолог{" "}
           <span className="text-primary relative inline-block">
-            психолога
+            на виду
             <svg
               className="absolute -bottom-2 left-0 w-full"
               height="12"
@@ -76,8 +76,11 @@ export function HeroSection() {
           </span>
         </h1>
 
-        <p className="text-xl sm:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto animate-fade-in-up animate-delay-100 leading-relaxed">
-          Онлайн-курс для частных специалистов: создайте личный бренд, выстройте поток клиентов и начните зарабатывать на любимом деле.
+        <p className="text-xl sm:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto animate-fade-in-up animate-delay-100 leading-relaxed">
+          Первый шаг к клиентам — без стресса, без лишнего маркетинга и без ощущения «я продаюсь»
+        </p>
+        <p className="text-base text-muted-foreground/70 mb-10 max-w-2xl mx-auto animate-fade-in-up animate-delay-100">
+          Пройдите бесплатную диагностику готовности к практике — узнайте, что именно мешает вам начать прямо сейчас
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up animate-delay-200 mb-12">
@@ -86,8 +89,8 @@ export function HeroSection() {
             className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-6 text-lg group shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all"
             asChild
           >
-            <a href="#contact">
-              Записаться на курс
+            <a href="#diagnosis">
+              Пройти диагностику бесплатно
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </Button>
@@ -97,22 +100,22 @@ export function HeroSection() {
             className="border-2 border-primary/20 text-foreground hover:bg-primary/5 hover:border-primary font-semibold px-8 py-6 text-lg backdrop-blur-sm bg-transparent"
             asChild
           >
-            <a href="#portfolio">Программа курса</a>
+            <a href="#services">Программа курса</a>
           </Button>
         </div>
 
         <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-muted-foreground animate-fade-in-up animate-delay-300">
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span>244 часа обучения</span>
+            <span>8 модулей практики</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-primary animate-pulse" style={{ animationDelay: "0.5s" }} />
-            <span>2 месяца дистанционно</span>
+            <span>Первый клиент — уже в процессе курса</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-primary animate-pulse" style={{ animationDelay: "1s" }} />
-            <span>Удостоверение о повышении квалификации</span>
+            <span>Без соцсетей и рекламного бюджета</span>
           </div>
         </div>
       </div>
