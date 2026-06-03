@@ -58,10 +58,10 @@ export function TestimonialsSection() {
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30 overflow-hidden">
       <div className="container mx-auto max-w-7xl">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-balance">
-          Истории участниц
+          Истории завершивших курс
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-          Психологи, которые сделали первый шаг — и не остановились.
+          Психологи, которые прошли курс до конца — и получили первых клиентов.
         </p>
         <div className="relative">
           <div ref={scrollRef} className="flex gap-6 overflow-x-hidden" style={{ scrollBehavior: "auto" }}>
