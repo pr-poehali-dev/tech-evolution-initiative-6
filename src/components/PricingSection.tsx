@@ -1,42 +1,45 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Check } from "lucide-react"
-import { QuoteFormDialog } from "@/components/QuoteFormDialog"
+import { Button } from "@/components/ui/button"
 
 const pricingTiers = [
   {
     name: "Базовый",
-    price: "99 900",
+    price: "12 900",
+    description: "Самостоятельное обучение в своём темпе",
     features: [
-      "До 5 страниц",
-      "Адаптивный дизайн",
-      "Базовая SEO-оптимизация",
-      "Форма обратной связи",
-      "1 месяц поддержки",
+      "Доступ ко всем видеоурокам",
+      "Учебные материалы и шаблоны",
+      "Практические задания",
+      "Удостоверение о повышении квалификации",
+      "Доступ к материалам 6 месяцев",
     ],
     highlighted: false,
   },
   {
-    name: "Про",
-    price: "249 900",
+    name: "С поддержкой",
+    price: "19 900",
+    description: "Обучение с обратной связью от куратора",
     features: [
-      "До 15 страниц",
-      "Премиум-дизайн",
-      "Расширенная SEO-оптимизация",
-      "Интеграция CMS",
-      "Функционал e-commerce",
-      "3 месяца поддержки",
+      "Всё из тарифа «Базовый»",
+      "Проверка домашних заданий",
+      "Обратная связь от куратора",
+      "Доступ к закрытому сообществу",
+      "Групповые разборы раз в неделю",
+      "Доступ к материалам 12 месяцев",
     ],
     highlighted: true,
   },
   {
-    name: "Индивидуальный",
+    name: "Персональный",
     price: "По запросу",
+    description: "Индивидуальная работа с экспертом",
     features: [
-      "Неограниченно страниц",
-      "Кастомный функционал",
-      "API-интеграции",
-      "Персональный менеджер",
-      "6 месяцев поддержки",
+      "Всё из тарифа «С поддержкой»",
+      "3 личные сессии с экспертом",
+      "Персональный план продвижения",
+      "Разбор вашего реального кейса",
+      "Пожизненный доступ к материалам",
     ],
     highlighted: false,
   },
@@ -57,13 +60,13 @@ export function PricingSection() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
             </span>
-            Прозрачные цены
+            Стоимость обучения
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-balance">
-            Выберите <span className="text-primary">идеальный тариф</span> для вашего проекта
+            Выберите <span className="text-primary">подходящий формат</span> обучения
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            От стартапов до крупного бизнеса — у нас есть подходящее решение
+            Для новичков и опытных специалистов — найдите тариф, который подходит именно вам
           </p>
         </div>
 
@@ -82,15 +85,15 @@ export function PricingSection() {
                   Популярный
                 </div>
               )}
-              <CardHeader className="text-center pb-8">
-                <CardTitle className="text-2xl mb-2">{tier.name}</CardTitle>
+              <CardHeader className="text-center pb-4">
+                <CardTitle className="text-2xl mb-1">{tier.name}</CardTitle>
+                <p className="text-sm text-muted-foreground">{tier.description}</p>
                 <div className="mt-4">
                   <span className="text-4xl font-bold">
                     {tier.price === "По запросу" ? (
                       <span className="text-3xl">{tier.price}</span>
                     ) : (
                       <>
-                        <span className="text-lg font-normal text-muted-foreground">от </span>
                         {tier.price}
                         <span className="text-lg font-normal text-muted-foreground"> ₽</span>
                       </>
@@ -107,13 +110,15 @@ export function PricingSection() {
                     </li>
                   ))}
                 </ul>
-                <QuoteFormDialog
-                  packageName={tier.name}
+                <Button
                   variant={tier.highlighted ? "default" : "outline"}
                   className={`w-full ${tier.highlighted ? "shadow-lg shadow-primary/20" : ""}`}
+                  asChild
                 >
-                  {tier.price === "По запросу" ? "Связаться с нами" : "Выбрать тариф"}
-                </QuoteFormDialog>
+                  <a href="#contact">
+                    {tier.price === "По запросу" ? "Узнать подробнее" : "Записаться"}
+                  </a>
+                </Button>
               </CardContent>
             </Card>
           ))}
@@ -121,8 +126,8 @@ export function PricingSection() {
 
         <div className="mt-12 text-center">
           <p className="text-sm text-muted-foreground">
-            Все тарифы включают <span className="text-primary font-semibold">бесплатную настройку хостинга</span> и{" "}
-            <span className="text-primary font-semibold">SSL-сертификат</span>
+            Все тарифы включают <span className="text-primary font-semibold">удостоверение государственного образца</span> и{" "}
+            <span className="text-primary font-semibold">доступ к закрытому сообществу выпускников</span>
           </p>
         </div>
       </div>

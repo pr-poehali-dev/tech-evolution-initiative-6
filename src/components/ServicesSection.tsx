@@ -1,42 +1,42 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Layout, Palette, Code, Share2, Target, Search } from "lucide-react"
+import Icon from "@/components/ui/icon"
 
 const services = [
   {
-    icon: Layout,
-    title: "Веб-дизайн",
+    icon: "UserCircle",
+    title: "Личный бренд",
     description:
-      "Мы создаем сайты, которые не только визуально привлекательны, но и функциональны, удобны в использовании. В CodeCraft ваш бренд в центре внимания — мы обеспечиваем соответствие онлайн-присутствия целям и ценностям вашего бизнеса.",
+      "Научитесь формулировать свою уникальность и позиционировать себя как эксперта. Вы поймёте, чем отличаетесь от других специалистов и как донести это до клиентов.",
   },
   {
-    icon: Palette,
-    title: "Графический дизайн",
+    icon: "Globe",
+    title: "Сайт и соцсети",
     description:
-      "От логотипов до постов в соцсетях — мы создаем креативные графические решения, усиливающие ваш бренд. Наши дизайны уникальны и профессиональны, производя нужное впечатление на целевую аудиторию.",
+      "Создайте профессиональное онлайн-присутствие: личный сайт, ведение социальных сетей, контент-план. Ваши клиенты будут находить вас сами.",
   },
   {
-    icon: Code,
-    title: "Веб-разработка",
+    icon: "Target",
+    title: "Привлечение клиентов",
     description:
-      "Мы создаем технически надежные и перспективные сайты. Наша команда обеспечивает надежность, масштабируемость и скорость, помогая вашему бизнесу расти в цифровом пространстве.",
+      "Освойте практические инструменты продвижения: таргетированная реклама, SEO, работа с отзывами и рекомендациями. Выстройте стабильный поток новых клиентов.",
   },
   {
-    icon: Share2,
-    title: "Соцсети",
+    icon: "MessageCircle",
+    title: "Работа с аудиторией",
     description:
-      "Сильное присутствие в социальных сетях сегодня решает многое. Мы поможем создать впечатление с помощью привлекательных визуалов и эффективных стратегий, чтобы ваш бренд оставался заметным.",
+      "Научитесь общаться с потенциальными клиентами, отрабатывать возражения и выстраивать доверие ещё до первой консультации.",
   },
   {
-    icon: Target,
-    title: "Результат",
+    icon: "BarChart2",
+    title: "Ценообразование и доход",
     description:
-      "В CodeCraft мы нацелены на успех. Наш подход всегда направлен на достижение измеримых результатов, способствующих росту вашего бизнеса. Вместе находим то, что действительно работает.",
+      "Разберитесь, как правильно устанавливать цены на услуги, формировать пакеты и увеличивать средний чек без потери клиентов.",
   },
   {
-    icon: Search,
-    title: "SEO",
+    icon: "Award",
+    title: "Репутация эксперта",
     description:
-      "Видимость в поиске критически важна. Мы оптимизируем сайт с применением современных SEO-техник, чтобы вы были выше в Google и целевая аудитория легко вас находила.",
+      "Публикации, выступления, партнёрства — создайте репутацию, которая работает на вас. Станьте специалистом, к которому выстраивается очередь.",
   },
 ]
 
@@ -47,13 +47,14 @@ export function ServicesSection() {
 
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="inline-block mb-4 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mx-auto block w-fit">
-          Наша экспертиза
+          Чему вы научитесь
         </div>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-balance">
-          В чем мы <span className="text-primary">сильны</span>
+          Ключевые{" "}
+          <span className="text-primary">навыки курса</span>
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto text-pretty leading-relaxed text-lg">
-          От концепции до запуска — мы трансформируем ваши цифровые амбиции в мощные онлайн-решения, приносящие результат.
+          За 2 месяца вы получите полный набор инструментов для самостоятельного продвижения — от создания бренда до стабильного потока клиентов.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
@@ -63,7 +64,7 @@ export function ServicesSection() {
             >
               <CardHeader>
                 <div className="mb-4 inline-flex p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
-                  <service.icon className="h-6 w-6" />
+                  <Icon name={service.icon} className="h-6 w-6" fallback="Star" />
                 </div>
                 <CardTitle className="text-xl group-hover:text-primary transition-colors">{service.title}</CardTitle>
               </CardHeader>

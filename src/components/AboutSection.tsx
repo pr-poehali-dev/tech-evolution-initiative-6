@@ -2,19 +2,19 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle2, Sparkles } from "lucide-react"
 
 const values = [
-  { title: "Качество", description: "Высококлассные решения, соответствующие самым высоким стандартам" },
-  { title: "Доступность", description: "Профессиональные сайты по честным и прозрачным ценам" },
-  { title: "Прозрачность", description: "Четкая коммуникация без скрытых платежей" },
-  { title: "Клиентоориентированность", description: "Ваши цели и пожелания всегда в приоритете" },
-  { title: "Масштабируемость", description: "Сайты, которые растут вместе с вашим бизнесом" },
-  { title: "Гибкость", description: "Быстрая адаптация под меняющиеся потребности" },
+  { title: "Практические инструменты", description: "Только рабочие методы, проверенные на реальных психологах" },
+  { title: "Дистанционный формат", description: "Учитесь в любое время и из любой точки мира" },
+  { title: "Поддержка куратора", description: "Обратная связь и ответы на вопросы на протяжении всего курса" },
+  { title: "Системный подход", description: "Чёткая последовательность шагов — от нуля до стабильного потока клиентов" },
+  { title: "Сообщество коллег", description: "Закрытая группа выпускников для обмена опытом и нетворкинга" },
+  { title: "Документ об образовании", description: "Удостоверение о повышении квалификации установленного образца" },
 ]
 
 const stats = [
-  { number: "50+", label: "Проектов" },
-  { number: "45+", label: "Довольных клиентов" },
-  { number: "30+", label: "Созданных логотипов" },
-  { number: "3+", label: "Года опыта" },
+  { number: "244", label: "Часа обучения" },
+  { number: "2", label: "Месяца курса" },
+  { number: "4", label: "Модуля программы" },
+  { number: "100%", label: "Дистанционно" },
 ]
 
 export function AboutSection() {
@@ -27,19 +27,19 @@ export function AboutSection() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold">
             <Sparkles className="h-4 w-4" />
-            О CodeCraft
+            О курсе
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Качество, которое{" "}
+            Обучение, которое{" "}
             <span className="text-primary relative">
-              впечатляет
+              работает
               <svg className="absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 200 8" fill="none">
                 <path d="M0 4C50 2 150 6 200 4" stroke="currentColor" strokeWidth="2" className="text-primary" />
               </svg>
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
-            Создание сайта не должно быть дорогим. Мы разрабатываем индивидуальные решения, которые идеально соответствуют пожеланиям каждого клиента.
+            НАДПО — Национальная академия дополнительного профессионального образования. Курс разработан специально для частных психологов, которые хотят выстроить стабильную практику и перестать зависеть от сарафанного радио.
           </p>
         </div>
 
