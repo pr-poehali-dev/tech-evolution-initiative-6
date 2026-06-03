@@ -35,13 +35,13 @@ export function ContactSection() {
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="text-center mb-16">
           <div className="inline-block mb-4 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold">
-            Контакты
+            Записаться
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Давайте <span className="text-primary">создавать вместе</span>
+            Начните <span className="text-primary">путь к клиентам</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
-            Готовы воплотить ваши цифровые амбиции? Свяжитесь с нами без обязательств и узнайте, чем мы можем помочь.
+            Оставьте заявку и наш менеджер свяжется с вами, ответит на вопросы и поможет выбрать подходящий формат обучения.
           </p>
         </div>
 
@@ -49,7 +49,7 @@ export function ContactSection() {
           <div className="lg:col-span-2">
             <Card className="border-none shadow-xl bg-background">
               <CardHeader>
-                <CardTitle className="text-2xl">Напишите нам</CardTitle>
+                <CardTitle className="text-2xl">Оставить заявку</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -107,7 +107,7 @@ export function ContactSection() {
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="Расскажите о вашем проекте..."
+                      placeholder="Ваш вопрос или пожелание по обучению..."
                       rows={6}
                       required
                       className="transition-all focus:scale-[1.02]"
@@ -131,7 +131,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">E-mail</h3>
-                    <p className="text-sm text-muted-foreground">hello@example.com</p>
+                    <p className="text-sm text-muted-foreground">info@nadpo.ru</p>
                   </div>
                 </div>
               </CardContent>
@@ -145,7 +145,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Телефон</h3>
-                    <p className="text-sm text-muted-foreground">+7 900 123-45-67</p>
+                    <p className="text-sm text-muted-foreground">8 800 222-55-52</p>
                   </div>
                 </div>
               </CardContent>
