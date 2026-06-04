@@ -4,7 +4,7 @@ import Icon from "@/components/ui/icon"
 
 export function Module1Teaser() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section id="module1" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <div className="absolute top-10 right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-10 left-10 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
 

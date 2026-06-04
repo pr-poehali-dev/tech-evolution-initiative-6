@@ -80,7 +80,7 @@ export function HeroSection() {
           Первый шаг к клиентам — без стресса, без лишнего маркетинга и без ощущения «я продаюсь»
         </p>
         <p className="text-base text-muted-foreground/70 mb-10 max-w-2xl mx-auto animate-fade-in-up animate-delay-100">
-          Пройдите бесплатную диагностику готовности к практике — узнайте, что именно мешает вам начать прямо сейчас
+          Первый модуль курса открыт бесплатно — материал и самодиагностика барьеров
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up animate-delay-200 mb-12">
@@ -89,8 +89,8 @@ export function HeroSection() {
             className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-6 text-lg group shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all"
             asChild
           >
-            <a href="#diagnosis">
-              Пройти диагностику бесплатно
+            <a href="#module1">
+              Открыть модуль бесплатно
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </Button>
