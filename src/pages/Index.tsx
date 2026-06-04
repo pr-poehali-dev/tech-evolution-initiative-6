@@ -2,7 +2,7 @@ import { Navbar } from "@/components/Navbar"
 import { HeroSection } from "@/components/HeroSection"
 import { ServicesSection } from "@/components/ServicesSection"
 import { AboutSection } from "@/components/AboutSection"
-import { DiagnosisSection } from "@/components/DiagnosisSection"
+import { Module1Teaser } from "@/components/Module1Teaser"
 import { TestimonialsSection } from "@/components/TestimonialsSection"
 import { PricingSection } from "@/components/PricingSection"
 import { ContactSection } from "@/components/ContactSection"
@@ -15,7 +15,7 @@ export default function Index() {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
-      <DiagnosisSection />
+      <Module1Teaser />
       <TestimonialsSection />
       <PricingSection />
       <ContactSection />
