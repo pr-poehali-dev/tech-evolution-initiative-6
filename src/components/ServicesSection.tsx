@@ -23,7 +23,7 @@ const modules = [
   {
     icon: "Map",
     number: "04",
-    title: "Где искать клиентов в 2026",
+    title: "Выбор каналов профессионального присутствия",
     description: "Агрегаторы B17, Ясно, Alter — пошагово с скриншотами. Без Instagram и рекламного бюджета.",
   },
   {
@@ -42,7 +42,7 @@ const modules = [
     icon: "Zap",
     number: "07",
     title: "Первый реальный шаг",
-    description: "Размещаем анкету, заполняем профиль или пишем первому партнёру — прямо во время курса, не откладывая.",
+    description: "Выбираем и выполняем первый реалистичный шаг, соответствующий вашей профессиональной ситуации.",
   },
   {
     icon: "RefreshCw",
@@ -62,10 +62,10 @@ export function ServicesSection() {
         </div>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-balance">
           8 модулей —{" "}
-          <span className="text-primary">от страха до первых клиентов</span>
+          <span className="text-primary">от профессиональных сомнений к устойчивой практике</span>
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed text-lg">
-          Каждый модуль заканчивается готовым артефактом: шаблоном, профилем или конкретным действием. Не теория — инструменты.
+          Каждый модуль заканчивается конкретным результатом: шаблоном, профилем или действием. Знания, которые сразу применяются в практике.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {modules.map((module, index) => (
