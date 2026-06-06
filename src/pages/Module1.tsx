@@ -149,7 +149,7 @@ export default function Module1() {
               activeSection === "quiz" ? "bg-background text-foreground shadow-sm" : "text-muted-foreground"
             }`}
           >
-            Самодиагностика
+            Готовность к практике
           </button>
         </div>
 
