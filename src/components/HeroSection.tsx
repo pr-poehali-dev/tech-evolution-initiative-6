@@ -77,10 +77,10 @@ export function HeroSection() {
         </h1>
 
         <p className="text-xl sm:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto animate-fade-in-up animate-delay-100 leading-relaxed">
-          Первый шаг к клиентам — без стресса, без лишнего маркетинга и без ощущения «я продаюсь»
+          Первые шаги к устойчивой профессиональной практике через этичное продвижение.
         </p>
         <p className="text-base text-muted-foreground/70 mb-10 max-w-2xl mx-auto animate-fade-in-up animate-delay-100">
-          Первый модуль курса открыт бесплатно — материал и самодиагностика барьеров
+          Первый модуль курса открыт бесплатно — материал и самодиагностика готовности к практике
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up animate-delay-200 mb-12">

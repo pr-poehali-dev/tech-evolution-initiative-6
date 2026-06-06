@@ -18,7 +18,7 @@ export function Module1Teaser() {
               От обучения к практике
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              Первый модуль курса открыт бесплатно. Разберитесь, почему вы откладываете старт — и пройдите самодиагностику барьеров. Без мотивационных призывов, с пониманием механизмов.
+              Первый модуль курса открыт бесплатно. Разберитесь, почему вы откладываете старт — и пройдите самодиагностику готовности к практике. Без мотивационных призывов, с пониманием механизмов.
             </p>
             <div className="flex flex-wrap gap-4 text-sm text-muted-foreground pt-1">
               <span className="flex items-center gap-1.5">
@@ -31,7 +31,7 @@ export function Module1Teaser() {
               </span>
               <span className="flex items-center gap-1.5">
                 <Icon name="BarChart2" size={14} className="text-primary" />
-                Самодиагностика барьеров
+                Самодиагностика готовности к практике
               </span>
             </div>
           </div>
